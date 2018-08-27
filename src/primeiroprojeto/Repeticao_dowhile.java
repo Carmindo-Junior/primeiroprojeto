@@ -8,7 +8,7 @@ public class Repeticao_dowhile {
 
         //dowhile a condição somente é avaliada depois que suas instruções são executadas pela primeira vez
         do {
-            System.out.println("voce tem permisssao pra entrar no dowhile" + x);
+            System.out.println("voce tem permisssao pra entrar no dowhil e" + x);
             x++;
         }
 

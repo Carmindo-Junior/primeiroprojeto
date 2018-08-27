@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Estado_Civil2
 {
-    public static void main(String[] args)
+    public void informarEstadocivil()
     {
         String estado = JOptionPane.showInputDialog("1 - Solteiro(a): \n2 - Desquitado(a): \n3 - Casado(a); \n4 -" +
                                                     " Divorciado(a): \n5 " +   "- Viuvo(a) \nEntre com a opcao \n");

@@ -28,22 +28,32 @@ public class MaiorNota
         System.out.print("Entre com o terceiro numero inteiro: "); // prompt para digitar as notas
         nota3 = input.nextInt(); // lê primeiro o número fornecido pelo usuário
 
+        if ((nota1 == nota2) && (nota1 == nota3))
+            {
+                System.out.println("As notas sao iguais: \n" + nota1 + "," + nota2 + "," + nota3 +"." );
+                return;
+            }
+
         if ((nota1 > nota2) && (nota1 > nota3))
-        {
-            System.out.println("A maior nota e a primeira:" + nota1);
-            return;
-        }
-        //else if**** colocar esle if e  funcionara tambem, porem retirar o return acima
-            if ((nota2 > nota1) && (nota2 > nota3))
-        {
-            System.out.println("A maior nota e a segunda:" + nota2);
-        }
+
+            {
+                System.out.println("A maior nota e a primeira:" + nota1);
+
+                return;
+            }
+
+
+        //else if**** colocar esle if e  funcionara tambem, porem retirar o return acima, quando nao havia a conta do 1=2 ou 1=3
+        if ((nota2 > nota1) && (nota2 > nota3))
+            {
+                System.out.println("A maior nota e a segunda:" + nota2);
+            }
 
         else
-        {
-            System.out.println("A maior nota e a terceira:" + nota3);
-            return;
-        }
+            {
+                System.out.println("A maior nota e a terceira:" + nota3);
+                return;
+            }
         // fim do metodo main
 
     }

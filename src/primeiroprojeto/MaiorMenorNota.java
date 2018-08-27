@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class MaiorMenorNota
 {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         int nota1; // declaracao da variavel do tipo inteiro number1 / primeiro nota
@@ -27,41 +26,71 @@ public class MaiorMenorNota
         System.out.print("Entre com o terceiro numero inteiro: "); // prompt para digitar as notas
         nota3 = input.nextInt(); // lê primeiro o número fornecido pelo usuário
 
+        if ((nota1 == nota2) && (nota1 == nota3)) {
+            System.out.println("As TRES notas sao iguais: \n" + nota1 + "," + nota2 + " e " + nota3 + ".");
+            return;
+
+        }
+
         if ((nota1 > nota2) && (nota1 > nota3)) {
             System.out.println("A maior nota e a primeira:" + nota1);
-            if (nota2 < nota3) {
-                System.out.println("A menor nota e a segunda:" + nota2);
-            } else {
-                System.out.println("A menor nota e a terceira:" + nota3);
 
+            if (nota2 == nota3) {
+                System.out.println("As menores notas sao as segunda e terceira: + \n" + nota2 + "," + nota3);
+                return;
+            }
+            else {
+
+                if(nota2 < nota3)
+                    System.out.println("A menor nota e a segunda:" + nota2);
+
+
+                else
+                    System.out.println("A menor nota e a terceira:" + nota3);
+                return;
             }
         }
 
-        if ((nota2 > nota1) && (nota2 > nota3))
-        {
+
+        if ((nota2 > nota1) && (nota2 > nota3)) {
             System.out.println("A maior nota e a segunda:" + nota2);
-            if (nota1 < nota3) {
-                System.out.println("A menor nota e a primeira:" + nota1);
-            } else {
-                System.out.println("A menor nota e a terceira:" + nota3);
 
+            if (nota1 == nota3) {
+                System.out.println("As menores notas sao as primeira e terceira: + \n" + nota1 + "," + nota3);
+                return;
             }
+            else {
 
+                if(nota2 < nota3)
+                    System.out.println("A menor nota e a segunda:" + nota2);
+
+
+                else
+                    System.out.println("A menor nota e a terceira:" + nota3);
+                return;
+            }
         }
 
-        if ((nota3 > nota1) && (nota3 > nota2))
-        {
+        if ((nota3 > nota1) && (nota3 > nota2)) {
             System.out.println("A maior nota e a terceira:" + nota3);
-            if (nota1 < nota2) {
-                System.out.println("A menor nota e a primeira:" + nota1);
-            } else {
-                System.out.println("A menor nota e a segunda:" + nota2);
+            if (nota1 == nota2) {
+                System.out.println("As menores notas sao as primeira e segunda: + \n" + nota1 + "," + nota2);
+                return;
+            }
+            else {
+
+                if(nota1 < nota2)
+                    System.out.println("A menor nota e a primeira:" + nota1);
+
+
+                else
+                    System.out.println("A menor nota e a segunda:" + nota2);
+                return;
             }
         }
     }        // fim do metodo main
 
 }
-
 
 //fim da classe aprovacao aluno
 
